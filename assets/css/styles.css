@@ -152,3 +152,54 @@ a   { color: inherit; text-decoration: none; }
   border-radius: 40px;
   box-shadow: var(--shadow-phone);
 }
+
+/* ── Features ────────────────────────────────────────── */
+.features {
+  padding: 40px 0 80px;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 72px 0;
+}
+
+.feature + .feature {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.feature--reverse .feature__content { order: 2; }
+.feature--reverse .feature__visual  { order: 1; }
+
+.feature__icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.feature__title {
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.feature__desc {
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 420px;
+}
+
+.feature__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.feature__iphone {
+  width: 240px;
+  border-radius: 40px;
+  box-shadow: var(--shadow-phone);
+}

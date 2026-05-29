@@ -17,3 +17,6 @@ dist/
 
 # Raw source images (not for distribution)
 iphone_images/
+
+# Internal docs (not for public serving)
+docs/

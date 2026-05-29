@@ -14,3 +14,6 @@ dist/
 
 # Claude
 .claude/
+
+# Raw source images (not for distribution)
+iphone_images/

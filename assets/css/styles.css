@@ -217,7 +217,7 @@ a   { color: inherit; text-decoration: none; }
 
 /* ── CTA Banner ──────────────────────────────────────── */
 .cta {
-  background-color: var(--card);
+  background-color: var(--bg);
   padding: 100px 0;
   text-align: center;
   scroll-margin-top: 72px;

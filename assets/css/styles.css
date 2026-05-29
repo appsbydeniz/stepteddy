@@ -116,10 +116,11 @@ a   { color: inherit; text-decoration: none; }
 }
 
 .hero__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 60px;
+  text-align: center;
+  gap: 0;
 }
 
 .hero__headline {
@@ -133,7 +134,7 @@ a   { color: inherit; text-decoration: none; }
 .hero__subline {
   font-size: 19px;
   color: var(--text-secondary);
-  max-width: 440px;
+  max-width: 520px;
   margin-bottom: 32px;
 }
 
@@ -142,16 +143,6 @@ a   { color: inherit; text-decoration: none; }
   padding: 16px 32px;
 }
 
-.hero__visual {
-  display: flex;
-  justify-content: center;
-}
-
-.hero__iphone {
-  width: 280px;
-  border-radius: 40px;
-  box-shadow: var(--shadow-phone);
-}
 
 /* ── Features ────────────────────────────────────────── */
 .features {
@@ -200,8 +191,18 @@ a   { color: inherit; text-decoration: none; }
 
 .feature__iphone {
   width: 240px;
-  border-radius: 40px;
-  box-shadow: var(--shadow-phone);
+  filter: drop-shadow(0 24px 60px rgba(0, 0, 0, 0.18));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+
+.feature__visual:hover .feature__iphone {
+  animation: float 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 32px 80px rgba(0, 0, 0, 0.22));
 }
 
 /* ── CTA Banner ──────────────────────────────────────── */
@@ -256,22 +257,10 @@ a   { color: inherit; text-decoration: none; }
 
 /* ── Responsive — mobile (<768px) ───────────────────── */
 @media (max-width: 767px) {
-  /* Hero: stack vertically, center */
-  .hero__container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
+  /* Hero: full-width centered */
   .hero__subline {
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
   }
-
-  .hero__visual { order: -1; }
-
-  .hero__iphone { width: 220px; }
 
   /* Features: stack vertically, remove alternating */
   .feature {
@@ -342,4 +331,5 @@ a   { color: inherit; text-decoration: none; }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
   .nav { transition: none; }
+  .feature__visual:hover .feature__iphone { animation: none; }
 }

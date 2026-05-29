@@ -70,3 +70,42 @@ a   { color: inherit; text-decoration: none; }
   padding: 10px 20px;
   font-size: 15px;
 }
+
+/* ── Nav ─────────────────────────────────────────────── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav.scrolled {
+  background-color: rgba(250, 245, 237, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+.nav__name {
+  font-size: 18px;
+  font-weight: 700;
+}

@@ -203,3 +203,52 @@ a   { color: inherit; text-decoration: none; }
   border-radius: 40px;
   box-shadow: var(--shadow-phone);
 }
+
+/* ── CTA Banner ──────────────────────────────────────── */
+.cta {
+  background-color: var(--card);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.cta__headline {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+}
+
+.cta__btn {
+  font-size: 17px;
+  padding: 16px 36px;
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+.footer {
+  padding: 32px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copy {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__links a {
+  color: var(--text-secondary);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover { color: var(--primary); }
